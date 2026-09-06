@@ -1,0 +1,26 @@
+name: Featureform
+description: Virtual feature store that turns existing data infrastructure into a feature platform. Define features in Python, version transformations, and serve training and inference features from warehouses and lakes you already run instead of copying data into a new store.
+tagline: Virtual feature store on top of your existing data stack
+
+github_url: https://github.com/featureform/featureform
+website_url: https://www.featureform.com
+docs_url: https://docs.featureform.com
+install_command: pip install featureform
+
+category: Data
+tags: [feature-store, mlops, python, training, inference, data-platform]
+pricing: freemium
+is_open_source: true
+license: MPL-2.0
+
+problem_solved: |
+  Feature engineering often lives in notebooks that do not match production
+  serving, so training-serving skew creeps in. Featureform virtualizes a feature
+  store over your warehouse and lake so the same feature definitions version,
+  train, and serve without duplicating data into a proprietary store.
+
+use_cases:
+  - Define versioned features in Python and serve them for both training and inference
+  - Point a virtual feature store at an existing warehouse instead of copying tables
+  - Reduce training-serving skew by reusing the same feature transformations
+  - Organize ML features across teams without standing up a separate feature database

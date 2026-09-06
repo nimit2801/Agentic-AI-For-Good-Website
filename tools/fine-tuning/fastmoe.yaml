@@ -1,0 +1,25 @@
+name: FastMoE
+description: High-performance Mixture-of-Experts implementation for PyTorch that speeds expert parallelism across GPUs. Lets researchers train and serve sparse MoE models without writing custom CUDA communication kernels for expert routing.
+tagline: Fast Mixture-of-Experts training for PyTorch
+
+github_url: https://github.com/laekov/fastmoe
+website_url: https://fastmoe.ai
+docs_url: https://fastmoe.ai
+
+category: Fine-tuning
+tags: [moe, pytorch, gpu, distributed-training, sparse-models, cuda]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Mixture-of-Experts models need efficient expert routing and all-to-all GPU
+  communication that vanilla PyTorch does not provide. FastMoE implements a fast
+  MoE layer so you can train sparse expert models on multiple GPUs without
+  hand-rolling CUDA kernels or depending on a full Megatron stack.
+
+use_cases:
+  - Train PyTorch Mixture-of-Experts models with efficient expert parallelism
+  - Replace a dense FFN with a sparse MoE layer in an existing transformer
+  - Scale expert routing across multiple GPUs without a custom communication stack
+  - Prototype sparse LLM architectures before moving to a full Megatron trainer

@@ -1,0 +1,26 @@
+name: BM25s
+description: Fast BM25 lexical search library for Python powered by NumPy and Numba. Indexes and ranks documents orders of magnitude faster than typical pure-Python BM25, with a small API suited to hybrid RAG that mixes keyword retrieval with embeddings.
+tagline: Fast BM25 search in Python via NumPy and Numba
+
+github_url: https://github.com/xhluca/bm25s
+website_url: https://bm25s.github.io
+docs_url: https://bm25s.github.io
+install_command: pip install bm25s
+
+category: RAG
+tags: [bm25, retrieval, python, rag, lexical-search, numpy, hybrid-search]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Hybrid RAG needs a fast lexical retriever beside the vector index, but classic
+  Python BM25 is too slow on large corpora and Java tools like Elasticsearch add
+  ops overhead. BM25s implements BM25 with NumPy and Numba so you can index and
+  rank documents in-process, then fuse keyword hits with embedding search.
+
+use_cases:
+  - Add BM25 keyword retrieval to a hybrid RAG pipeline next to vector search
+  - Benchmark lexical vs dense retrieval on a local corpus without Elasticsearch
+  - Rank documentation chunks by query terms inside a Python RAG service
+  - Prototype sparse retrieval for legal or medical corpora that need exact tokens
