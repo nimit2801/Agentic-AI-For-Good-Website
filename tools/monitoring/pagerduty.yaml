@@ -1,0 +1,24 @@
+name: PagerDuty
+description: An incident response and on-call platform that routes alerts, runs escalation policies, and coordinates response when model APIs, GPU clusters, or agent pipelines fail. Teams get noise-reduced paging, status updates, and post-incident timelines from one console.
+tagline: On-call incident response for production AI systems
+
+website_url: https://www.pagerduty.com
+docs_url: https://developer.pagerduty.com
+
+category: Monitoring
+tags: [incident-response, on-call, alerting, paging, sla, observability]
+pricing: freemium
+is_open_source: false
+
+problem_solved: |
+  Prometheus and log alerts fire, but nobody knows who is on call or how to escalate when
+  an inference endpoint is down at 3am. PagerDuty turns those alerts into incidents with
+  escalation policies, mobile paging, and a response timeline so GPU clusters and agent
+  services get a human in the loop before customers feel the outage.
+
+use_cases:
+  - Page the on-call ML engineer when a model-serving SLO burns
+  - Escalate unanswered GPU cluster alerts from Prometheus Alertmanager
+  - Coordinate incident response across data, platform, and agent teams
+  - Reduce alert noise with event intelligence before waking someone
+  - Capture a post-incident timeline for a failed RAG or training pipeline
