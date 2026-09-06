@@ -1,0 +1,26 @@
+name: PgBouncer
+description: Lightweight connection pooler for PostgreSQL. Multiplexes many app connections onto a smaller set of server connections so RAG services, agents, and notebooks do not exhaust Postgres max_connections.
+tagline: Lightweight PostgreSQL connection pooler
+
+github_url: https://github.com/pgbouncer/pgbouncer
+website_url: https://www.pgbouncer.org/
+docs_url: https://www.pgbouncer.org/usage.html
+install_command: brew install pgbouncer
+
+category: Data
+tags: [postgresql, connection-pooling, database, performance, cli]
+pricing: free
+is_open_source: true
+license: ISC
+
+problem_solved: |
+  Each agent, notebook, and RAG worker opens its own Postgres connections and
+  quickly hits max_connections. PgBouncer sits in front of Postgres, pools
+  sessions or transactions, and keeps the database from falling over under
+  bursty ML app traffic.
+
+use_cases:
+  - Pool connections from many RAG workers onto a small Postgres instance
+  - Protect a feature-store database from notebook connection storms
+  - Run transaction pooling in front of Patroni-managed Postgres primaries
+  - Cut connection overhead for short-lived agent queries against Postgres

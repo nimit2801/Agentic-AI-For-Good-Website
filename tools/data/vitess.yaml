@@ -1,0 +1,25 @@
+name: Vitess
+description: CNCF database clustering system that shards MySQL for horizontal scale. Lets AI product backends and feature stores keep MySQL compatibility while spreading write and read load across many MySQL instances.
+tagline: Horizontal sharding for MySQL at CNCF scale
+
+github_url: https://github.com/vitessio/vitess
+website_url: https://vitess.io
+docs_url: https://vitess.io/docs/
+
+category: Data
+tags: [mysql, sharding, kubernetes, cncf, database, scalability]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Feature stores and product databases outgrow a single MySQL primary. Manual
+  sharding is brittle. Vitess sits in front of many MySQL instances, routes
+  queries, and reshard live so you keep the MySQL protocol while scaling writes
+  and reads for AI application backends.
+
+use_cases:
+  - Shard a MySQL-backed feature or metadata store without rewriting the app SQL
+  - Run Vitess on Kubernetes to scale AI product databases horizontally
+  - Reshard live tables when training-job metadata volume grows
+  - Keep MySQL compatibility for ORMs while adding connection pooling and routing
