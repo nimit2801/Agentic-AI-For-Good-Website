@@ -1,0 +1,28 @@
+name: csvkit
+description: Suite of command-line tools for converting to and working with CSV, including csvcut, csvstat, csvgrep, and SQL against CSV files. csvkit is the Python toolkit for slicing training manifests, label files, and eval dumps without opening a notebook.
+tagline: Command-line tools for converting and querying CSV
+
+github_url: https://github.com/wireservice/csvkit
+website_url: https://csvkit.readthedocs.io/
+docs_url: https://csvkit.readthedocs.io/
+
+install_command: pip install csvkit
+
+category: Data
+tags: [csv, python, cli, etl, tabular, data]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Training manifests and label files live as CSV, but cutting columns,
+  checking stats, or grepping rows usually means a one-off pandas script.
+  csvkit gives Unix-style tools for CSV so you can inspect, convert, and
+  SQL-query those files in a pipeline before a training run.
+
+use_cases:
+  - Cut columns from a large dataset manifest before upload
+  - Compute stats on a label CSV to check class balance
+  - Convert Excel annotation exports to UTF-8 CSV
+  - SQL-query a metrics CSV without loading it into a notebook
+  - Grep eval dumps for failing example IDs in CI

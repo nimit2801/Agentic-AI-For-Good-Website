@@ -1,0 +1,28 @@
+name: qsv
+description: Fast CSV and tabular data-wrangling toolkit written in Rust, with commands for frequency, join, sample, and schema. qsv handles multi-gigabyte training manifests and eval dumps that choke slower Python CSV tools.
+tagline: Ultra-fast CSV data-wrangling toolkit
+
+github_url: https://github.com/dathere/qsv
+website_url: https://qsv.dathere.com/
+docs_url: https://github.com/dathere/qsv
+
+install_command: brew install qsv
+
+category: Data
+tags: [csv, rust, cli, etl, tabular, data]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Multi-gigabyte CSV manifests and eval dumps take minutes in pandas or
+  csvkit when you only need a frequency count or a sample. qsv is a
+  Rust CLI that streams those files so you can profile, join, and slice
+  training data on a laptop or CI runner.
+
+use_cases:
+  - Frequency-count classes in a multi-GB label CSV
+  - Sample rows from a huge training manifest for a smoke test
+  - Join two eval dumps on example ID without loading them into memory
+  - Infer a schema from a messy CSV before a Spark or pandas load
+  - Slice a dataset CSV by date column for a backfill job
