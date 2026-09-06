@@ -1,0 +1,28 @@
+name: ranger
+description: VIM-inspired terminal file manager with a miller-column layout and preview pane. ranger lets you browse datasets and experiment folders over SSH with keyboard navigation instead of chaining ls and cd.
+tagline: VIM-inspired terminal file manager
+
+github_url: https://github.com/ranger/ranger
+website_url: https://ranger.github.io
+docs_url: https://ranger.github.io/docs.html
+
+install_command: brew install ranger
+
+category: Dev Tools
+tags: [cli, tui, file-manager, python, datasets, ssh]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  On a headless GPU box, moving between experiment directories means repeated
+  ls and cd with no preview of images or logs. ranger is a VIM-style file
+  manager with miller columns and previews so you can inspect checkpoints and
+  dataset samples without leaving the SSH session.
+
+use_cases:
+  - Browse experiment output folders on a remote training node
+  - Preview images and text samples before starting a data loader
+  - Move or rename checkpoint files with VIM keybindings
+  - Inspect logs alongside the directory that produced them
+  - Bookmark dataset roots you jump between during a training week
