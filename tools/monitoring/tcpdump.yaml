@@ -1,0 +1,28 @@
+name: tcpdump
+description: Command-line packet analyzer that captures and prints network traffic. tcpdump is the fast way to see DNS, HTTP, and TLS on a headless GPU node when Wireshark is not available.
+tagline: Capture packets from the command line
+
+github_url: https://github.com/the-tcpdump-group/tcpdump
+website_url: https://www.tcpdump.org/
+docs_url: https://www.tcpdump.org/manpages/tcpdump.1.html
+
+install_command: brew install tcpdump
+
+category: Monitoring
+tags: [networking, packets, cli, debugging, linux]
+pricing: free
+is_open_source: true
+license: BSD-3-Clause
+
+problem_solved: |
+  When an agent call hangs, application logs rarely show DNS failures or TLS
+  alerts. tcpdump captures packets on a headless node so you can see which host
+  was contacted, whether the handshake completed, and how much data moved,
+  without installing a GUI sniffer.
+
+use_cases:
+  - Capture DNS and TLS while an inference client fails to reach the API
+  - Confirm a data loader is talking to the expected object-storage endpoint
+  - Filter HTTP traffic from a vector database on a shared GPU box
+  - Debug webhook delivery from an agent runtime with a short pcap
+  - Verify multicast or NCCL-related traffic during distributed training

@@ -1,0 +1,28 @@
+name: rsync
+description: Fast incremental file transfer tool for copying and syncing files over SSH or locally. rsync copies only the deltas so you can move datasets, checkpoints, and logs without re-sending gigabytes that already arrived.
+tagline: Incremental file sync over SSH or local disks
+
+github_url: https://github.com/RsyncProject/rsync
+website_url: https://rsync.samba.org/
+docs_url: https://download.samba.org/pub/rsync/rsync.1
+
+install_command: brew install rsync
+
+category: Dev Tools
+tags: [cli, sync, datasets, ssh, backup, artifacts]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  scp re-sends an entire checkpoint directory when one file changes, which
+  wastes hours on multi-gigabyte training runs. rsync transfers only the
+  differences, preserves permissions, and resumes after a drop so you can
+  keep experiment artifacts in sync across GPU nodes and laptops.
+
+use_cases:
+  - Sync a dataset directory from NAS onto a GPU node without recopying files
+  - Resume a dropped checkpoint copy after a cluster network blip
+  - Mirror experiment logs from training boxes to a backup disk
+  - Deploy model artifacts to an inference host over SSH
+  - Exclude cache files while copying a working tree between machines

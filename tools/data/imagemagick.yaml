@@ -1,0 +1,28 @@
+name: ImageMagick
+description: Open-source suite for creating, editing, converting, and displaying images across 200+ formats. ImageMagick is the CLI workhorse for resizing dataset images, converting formats, and generating thumbnails in ML pipelines.
+tagline: Convert and transform images from the command line
+
+github_url: https://github.com/ImageMagick/ImageMagick
+website_url: https://imagemagick.org
+docs_url: https://imagemagick.org/script/command-line-processing.php
+
+install_command: brew install imagemagick
+
+category: Data
+tags: [images, conversion, cli, datasets, computer-vision]
+pricing: free
+is_open_source: true
+license: ImageMagick
+
+problem_solved: |
+  Vision datasets arrive as mixed JPEG, PNG, TIFF, and WebP files at inconsistent
+  sizes. ImageMagick converts, resizes, and strips metadata in batch so you can
+  normalize training images without writing a one-off OpenCV script for every
+  new crawl.
+
+use_cases:
+  - Resize and convert a vision dataset to a single format before training
+  - Generate thumbnails for a dataset browser or labeling UI
+  - Strip EXIF metadata from crawled images used in fine-tuning
+  - Composite overlays for evaluation galleries of model outputs
+  - Convert PDF pages to images for OCR and document-AI pipelines

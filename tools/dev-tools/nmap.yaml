@@ -1,0 +1,28 @@
+name: nmap
+description: Network mapper that discovers hosts, open ports, and running services. nmap inventories GPU boxes, checks which inference ports are exposed, and verifies firewall rules before you put a model server on a network.
+tagline: Discover hosts, ports, and services on a network
+
+github_url: https://github.com/nmap/nmap
+website_url: https://nmap.org/
+docs_url: https://nmap.org/book/man.html
+
+install_command: brew install nmap
+
+category: Dev Tools
+tags: [networking, security, scanning, cli, discovery]
+pricing: free
+is_open_source: true
+license: NPSL
+
+problem_solved: |
+  You cannot tell from SSH which ports a training box actually exposes, and a
+  forgotten Jupyter or inference port is a security hole. nmap maps live hosts
+  and services so you can confirm only intended model APIs are reachable before
+  opening a cluster to the rest of the team.
+
+use_cases:
+  - Inventory which GPU nodes and inference ports are live on a lab subnet
+  - Confirm a model server is bound only to the expected interface
+  - Check firewall rules after deploying a vector database
+  - Find forgotten Jupyter or TensorBoard ports on shared machines
+  - Script a pre-flight scan before exposing an agent webhook
