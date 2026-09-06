@@ -1,0 +1,28 @@
+name: aria2
+description: Lightweight multi-protocol download utility for HTTP, HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 splits files across connections and sources so you can pull large datasets, model weights, and artifacts faster than a single wget stream.
+tagline: Multi-source CLI downloader for large files
+
+github_url: https://github.com/aria2/aria2
+website_url: https://aria2.github.io/
+docs_url: https://aria2.github.io/manual/en/html/index.html
+
+install_command: brew install aria2
+
+category: Dev Tools
+tags: [cli, download, datasets, bittorrent, http, artifacts]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  wget and curl pull one URL at a time, which is slow for multi-gigabyte model
+  weights and public datasets. aria2 parallelizes across connections and sources,
+  resumes interrupted transfers, and speaks HTTP, FTP, SFTP, BitTorrent, and Metalink
+  so you can fetch training data without standing up a custom download script.
+
+use_cases:
+  - Download Hugging Face or S3-hosted model weights with multi-connection speed
+  - Resume an interrupted dataset fetch after a cluster node drops the network
+  - Pull a Metalink or torrent of public training data onto a GPU box
+  - Mirror artifacts across HTTP and FTP mirrors in one command
+  - Script batch downloads of checkpoints in CI without a GUI client

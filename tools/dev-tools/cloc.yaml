@@ -1,0 +1,28 @@
+name: cloc
+description: Counts blank lines, comments, and physical lines of source code across hundreds of languages. cloc gives a language mix so you can size an ML repo, compare generated vs handwritten code, and report codebase scale without opening an IDE.
+tagline: Count lines of code by language
+
+github_url: https://github.com/AlDanial/cloc
+website_url: https://github.com/AlDanial/cloc
+docs_url: https://github.com/AlDanial/cloc
+
+install_command: brew install cloc
+
+category: Dev Tools
+tags: [cli, metrics, source-code, languages, productivity]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  Sizing a mixed Python, CUDA, and YAML ML repo by hand is slow and wrong.
+  cloc walks the tree, ignores vendored noise when asked, and reports blank,
+  comment, and code lines per language so you can compare generated agent code
+  to handwritten training code before a review or a paper appendix.
+
+use_cases:
+  - Report language mix and code size for an ML training repository
+  - Compare generated agent code against handwritten CUDA kernels
+  - Exclude notebooks and data files when counting production Python
+  - Produce a lines-of-code table for a research paper or audit
+  - Track how a fine-tuning codebase grows across releases

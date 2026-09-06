@@ -1,0 +1,28 @@
+name: Yazi
+description: Blazing fast terminal file manager written in Rust, based on async I/O. Yazi lets you browse, preview, and batch-operate on datasets and checkpoints in the terminal without waiting on a GUI file manager.
+tagline: Async terminal file manager written in Rust
+
+github_url: https://github.com/sxyazi/yazi
+website_url: https://yazi-rs.github.io
+docs_url: https://yazi-rs.github.io
+
+install_command: brew install yazi
+
+category: Dev Tools
+tags: [cli, tui, file-manager, rust, datasets, productivity]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  ls and find are slow when a dataset directory has tens of thousands of shards,
+  and GUI file managers are unavailable on headless GPU boxes. Yazi is an async
+  TUI file manager with previews and batch ops so you can navigate checkpoints
+  and training data without leaving the SSH session.
+
+use_cases:
+  - Browse a large dataset directory on a headless GPU node over SSH
+  - Preview images and text samples before kicking off a training run
+  - Batch-rename or move checkpoint files without a GUI
+  - Jump between experiment output folders with fuzzy find
+  - Inspect logs and artifacts while a training job is still running
