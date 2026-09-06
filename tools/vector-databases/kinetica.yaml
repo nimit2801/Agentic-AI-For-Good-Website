@@ -1,0 +1,23 @@
+name: Kinetica
+description: GPU-accelerated analytics database with vector search, SQL, and geospatial functions. Runs similarity search beside real-time aggregations so teams can mix embeddings with operational analytics instead of adding a separate vector store.
+tagline: GPU analytics database with built-in vector search
+
+website_url: https://www.kinetica.com
+docs_url: https://docs.kinetica.com
+
+category: Vector DB
+tags: [gpu, analytics, vector-search, sql, geospatial, saas]
+pricing: paid
+is_open_source: false
+
+problem_solved: |
+  Mixing vector similarity with SQL analytics usually means a warehouse plus a
+  separate vector DB and glue jobs. Kinetica puts GPU-accelerated SQL, spatial
+  queries, and vector search in one engine so embeddings can be filtered and
+  joined with operational data without a sidecar index.
+
+use_cases:
+  - Run KNN over embeddings next to SQL filters on operational tables
+  - Combine geospatial analytics with vector similarity for location-aware search
+  - Query high-ingest telemetry with GPU-accelerated aggregations and embeddings
+  - Avoid a separate vector database when the warehouse already holds features

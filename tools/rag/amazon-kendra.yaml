@@ -1,0 +1,23 @@
+name: Amazon Kendra
+description: AWS managed enterprise search and RAG service that indexes documents from S3, SharePoint, databases, and SaaS connectors. Returns ranked passages with filters so internal knowledge bases can power search and retrieval-augmented generation without a self-hosted index.
+tagline: Managed enterprise search and RAG on AWS
+
+website_url: https://aws.amazon.com/kendra/
+docs_url: https://docs.aws.amazon.com/kendra/
+
+category: RAG
+tags: [aws, enterprise-search, rag, managed, saas, retrieval]
+pricing: paid
+is_open_source: false
+
+problem_solved: |
+  Enterprise RAG needs connectors, access control, and ranked passages across
+  SharePoint, S3, and wikis. Building that index in-house is slow. Amazon Kendra
+  is a managed retriever that crawls those sources and returns passages you can
+  feed to an LLM without operating Elasticsearch or a vector cluster.
+
+use_cases:
+  - Index internal wikis, S3 docs, and SharePoint for enterprise question answering
+  - Use Kendra as the retriever in a RAG chatbot on AWS
+  - Filter search results by metadata and access control for regulated corpora
+  - Prototype document Q&A without standing up a self-hosted search index
