@@ -1,0 +1,28 @@
+name: lsd
+description: Next-generation ls with colors, icons, and tree view, written in Rust. lsd is a drop-in listing tool for exploring dataset directories, experiment folders, and checkpoint trees without the plain ls output.
+tagline: Next-gen ls with colors, icons, and tree view
+
+github_url: https://github.com/lsd-rs/lsd
+website_url: https://github.com/lsd-rs/lsd
+docs_url: https://github.com/lsd-rs/lsd
+
+install_command: brew install lsd
+
+category: Dev Tools
+tags: [cli, rust, ls, filesystem, terminal]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Plain ls makes it hard to scan mixed dataset dirs, checkpoint trees, and
+  experiment folders on a GPU node. lsd adds colors, icons, and a tree view
+  so you can see file types and sizes at a glance when navigating training
+  artifacts.
+
+use_cases:
+  - Tree-list a checkpoint directory on a GPU node
+  - Scan a dataset folder with icons for file types
+  - List experiment outputs sorted by size after a training run
+  - Replace ls in a developer shell for ML project navigation
+  - Inspect nested Hydra output dirs without a GUI file manager
