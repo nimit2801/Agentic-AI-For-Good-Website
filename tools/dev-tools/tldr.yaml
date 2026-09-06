@@ -1,0 +1,28 @@
+name: tldr
+description: Community-driven cheatsheets for command-line tools. tldr shows practical examples instead of a full man page so you can recall git, docker, kubectl, and CUDA commands without leaving the terminal.
+tagline: Practical cheatsheets for command-line tools
+
+github_url: https://github.com/tldr-pages/tldr
+website_url: https://tldr.sh
+docs_url: https://github.com/tldr-pages/tldr
+
+install_command: npm install -g tldr
+
+category: Dev Tools
+tags: [cli, documentation, cheatsheet, man-pages, productivity]
+pricing: free
+is_open_source: true
+license: CC-BY-4.0
+
+problem_solved: |
+  man pages are complete but slow to scan when you just need the one docker or
+  kubectl invocation that works. tldr is a community set of example-first pages
+  so ML engineers can look up git, nvidia-smi wrappers, and cloud CLIs in a few
+  lines instead of scrolling a 2,000-line manual.
+
+use_cases:
+  - Look up common git and docker commands without opening a browser
+  - Refresh kubectl and helm examples while debugging a GPU cluster
+  - Share a short command cheatsheet with new engineers on a training box
+  - Check tar, rsync, and ssh flags when moving datasets between machines
+  - Contribute example pages for internal ML CLI tools

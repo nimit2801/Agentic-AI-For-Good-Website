@@ -1,0 +1,28 @@
+name: Flux CD
+description: Open GitOps continuous delivery for Kubernetes. Flux reconciles cluster state from Git so agent workloads, model servers, and GPU operators stay in the desired revision without click-ops deploys.
+tagline: GitOps continuous delivery for Kubernetes clusters
+
+github_url: https://github.com/fluxcd/flux2
+website_url: https://fluxcd.io
+docs_url: https://fluxcd.io/flux/
+
+install_command: brew install fluxcd/tap/flux
+
+category: Dev Tools
+tags: [gitops, kubernetes, cd, flux, helm, kustomize]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Kubernetes YAML applied by hand drifts from Git, and CI scripts that kubectl apply
+  do not converge when someone edits the cluster. Flux watches Git and Helm sources
+  and continuously reconciles so GPU operators, agents, and model-serving manifests
+  match the repo instead of a snowflake cluster.
+
+use_cases:
+  - Reconcile a Kubernetes cluster from a Git repository of Kustomize overlays
+  - Deploy Helm charts for Prometheus, GPU Operator, and inference services via GitOps
+  - Promote an agent API from staging to production by merging a Git commit
+  - Auto-update container image tags when a new model-server build is published
+  - Multi-cluster GitOps for GPU training and CPU serving environments

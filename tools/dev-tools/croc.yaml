@@ -1,0 +1,28 @@
+name: croc
+description: A tool that sends files and folders between computers with end-to-end encryption, a short code phrase, and no accounts. croc relays through a public or self-hosted server so you can move datasets, checkpoints, and logs without standing up object storage.
+tagline: Encrypted file transfer with a short code phrase
+
+github_url: https://github.com/schollz/croc
+website_url: https://github.com/schollz/croc
+docs_url: https://github.com/schollz/croc
+
+install_command: brew install croc
+
+category: Dev Tools
+tags: [file-transfer, encryption, cli, p2p, datasets]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Moving a checkpoint or a dataset slice between laptops still means email, USB, or
+  an S3 bucket with IAM. croc gives both sides a short code, encrypts the transfer,
+  and works across NATs so ML engineers can send files without creating cloud
+  credentials for a one-off copy.
+
+use_cases:
+  - Send a model checkpoint from a training box to a laptop with a code phrase
+  - Transfer a dataset sample to a collaborator without uploading to object storage
+  - Copy logs and traces off a GPU node when SCP and cloud creds are blocked
+  - Self-host a croc relay for internal transfers of private training data
+  - Resume a large interrupted transfer of artifacts between machines
