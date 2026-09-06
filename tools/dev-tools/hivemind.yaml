@@ -1,0 +1,22 @@
+name: Hivemind
+description: Decentralized PyTorch library for training neural networks across volunteer machines over the internet. Hivemind runs distributed averaging, Mixture-of-Experts layers, and DHT-based peer discovery so you can scale training without a dedicated GPU cluster.
+tagline: Train PyTorch models across volunteer machines, not a private cluster
+
+github_url: https://github.com/learning-at-home/hivemind
+docs_url: https://learning-at-home.readthedocs.io/
+install_command: pip install hivemind
+
+category: Dev Tools
+tags: [python, pytorch, distributed-training, decentralized, dht, mixture-of-experts, volunteer-computing]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Large-model training usually needs a private GPU cluster with fast interconnects. Independent labs and open collaborations rarely have that. Hivemind turns unreliable volunteer machines into a training swarm: peers discover each other over a DHT, average gradients asynchronously, and host Mixture-of-Experts layers that other peers can call. You get collaborative training and inference over the public internet without a central coordinator.
+
+use_cases:
+  - Train a language model collaboratively across home GPUs that join and leave the swarm
+  - Host decentralized Mixture-of-Experts layers that other peers query during training or inference
+  - Adapt an existing PyTorch Lightning training loop to slow, unreliable networks via the Hivemind strategy
+  - Power volunteer inference networks such as Petals without standing up a managed GPU fleet
