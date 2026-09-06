@@ -1,0 +1,27 @@
+name: MemoRAG
+description: Memory-augmented RAG framework that builds a global memory over long corpora, then recalls query-specific clues to improve retrieval. Handles hundreds of thousands of tokens so RAG can answer implicit questions that standard chunk search misses.
+tagline: Memory-inspired RAG for long-context knowledge discovery
+
+github_url: https://github.com/qhjqhj00/MemoRAG
+website_url: https://github.com/qhjqhj00/MemoRAG
+docs_url: https://arxiv.org/abs/2409.05591
+install_command: pip install memorag
+
+category: RAG
+tags: [rag, memory, long-context, python, retrieval, llm]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Standard RAG only helps when the query names the evidence you need. On long
+  books, reports, or mixed corpora the right passage is often implied, not
+  keyword-matched. MemoRAG memorizes the whole context, generates clues from
+  that memory, then retrieves evidence so answers stay grounded on very long
+  documents.
+
+use_cases:
+  - Answer implicit questions over a book-length corpus that chunk search misses
+  - Summarize and query long reports after a single memorize pass with cached KV
+  - Build RAG over legal or research PDFs that exceed typical context windows
+  - Reuse encoded memory caches so repeated queries skip re-indexing the corpus

@@ -1,0 +1,26 @@
+name: CLIP as Service
+description: Scalable CLIP embedding service from Jina AI for images and sentences. Exposes encode, rank, and cross-modal search over gRPC or HTTP so teams can serve CLIP embeddings without wrapping the model themselves.
+tagline: Scalable CLIP embeddings for images and sentences
+
+github_url: https://github.com/jina-ai/clip-as-service
+website_url: https://clip-as-service.jina.ai
+docs_url: https://clip-as-service.jina.ai
+install_command: pip install clip-as-service
+
+category: Other
+tags: [clip, embeddings, multimodal, python, image-search, jina, serving]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Running CLIP for production image-text search means packaging the model,
+  batching, and exposing an API. CLIP as Service ships a client and server that
+  encode images and sentences, rank pairs, and scale across GPUs so you can
+  plug CLIP embeddings into search without building a serving stack.
+
+use_cases:
+  - Encode product images and captions into a shared CLIP space for visual search
+  - Rank candidate captions against an image from a gRPC or HTTP CLIP server
+  - Serve CLIP embeddings to a vector database without wrapping the model yourself
+  - Prototype cross-modal retrieval in Python with a one-line client encode call

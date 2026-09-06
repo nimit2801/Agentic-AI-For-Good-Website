@@ -1,0 +1,24 @@
+name: Algolia
+description: Hosted search API with typo-tolerant full-text search, faceting, and ranking rules. Used to add instant search to apps and docs, including AI product catalogs, without operating Elasticsearch yourself.
+tagline: Hosted search API with typo-tolerant ranking and faceting
+
+website_url: https://www.algolia.com
+docs_url: https://www.algolia.com/doc/
+install_command: pip install algoliasearch
+
+category: Other
+tags: [search, saas, full-text-search, api, ranking, python]
+pricing: freemium
+is_open_source: false
+
+problem_solved: |
+  Shipping fast, typo-tolerant search usually means running Elasticsearch or
+  writing ranking rules by hand. Algolia is a hosted search API with ranking,
+  facets, and SDKs so product, docs, and dataset catalogs get instant search
+  without operating a search cluster.
+
+use_cases:
+  - Add typo-tolerant search to an AI tool catalog or documentation site
+  - Facet and rank product or dataset listings from a hosted search index
+  - Prototype search UX in Python with the Algolia API client
+  - Offload full-text ranking so the app stack does not run Elasticsearch
