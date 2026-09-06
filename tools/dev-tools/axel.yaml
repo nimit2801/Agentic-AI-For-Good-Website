@@ -1,0 +1,28 @@
+name: axel
+description: Lightweight CLI download accelerator that fetches a file over multiple HTTP connections. axel is useful when pulling large model weights or dataset shards over a slow link and a single wget stream cannot fill the pipe.
+tagline: Lightweight CLI download accelerator
+
+github_url: https://github.com/axel-download-accelerator/axel
+website_url: https://github.com/axel-download-accelerator/axel
+docs_url: https://github.com/axel-download-accelerator/axel
+
+install_command: brew install axel
+
+category: Dev Tools
+tags: [download, http, cli, networking, datasets]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  A single-connection wget or curl of a multi-GB checkpoint often leaves
+  bandwidth unused on long-haul links. axel opens several HTTP connections
+  so model weights and dataset shards download faster without a heavy
+  download manager.
+
+use_cases:
+  - Accelerate a large model-weight download over HTTP
+  - Pull dataset shards in parallel connections on a cluster login node
+  - Resume an interrupted checkpoint download without a browser
+  - Compare single-stream vs multi-connection throughput to an object store
+  - Fetch release tarballs faster in CI image builds
