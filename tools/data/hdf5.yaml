@@ -1,0 +1,25 @@
+name: HDF5
+description: Hierarchical Data Format library for storing large numerical arrays, tables, and metadata in a portable binary file. The standard on-disk format for scientific and ML datasets that need chunking, compression, and partial reads.
+tagline: Hierarchical binary format for large scientific arrays
+
+github_url: https://github.com/HDFGroup/hdf5
+website_url: https://www.hdfgroup.org/solutions/hdf5/
+docs_url: https://docs.hdfgroup.org/hdf5/develop/
+install_command: brew install hdf5
+
+category: Data
+tags: [array-storage, scientific-computing, hdf5, numerical, datasets, compression]
+pricing: free
+is_open_source: true
+
+problem_solved: |
+  Large numerical datasets do not fit in CSV or a single NumPy save file, and
+  you still need partial reads, compression, and portable metadata. HDF5 stores
+  chunked arrays and groups in one file so training pipelines can stream
+  subsets without loading the whole dump into memory.
+
+use_cases:
+  - Store chunked training arrays with compression and named groups in one file
+  - Read slices of a multi-gigabyte scientific dataset without loading it all
+  - Exchange numerical datasets between Python, C++, and MATLAB pipelines
+  - Back h5py, PyTables, and TensorFlow data loaders with a portable file format

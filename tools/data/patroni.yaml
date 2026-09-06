@@ -1,0 +1,26 @@
+name: Patroni
+description: Python template for PostgreSQL high availability using etcd, Consul, ZooKeeper, or Kubernetes. Automates leader election, failover, and replica management so Postgres clusters that hold ML metadata stay available.
+tagline: PostgreSQL high availability with automatic failover
+
+github_url: https://github.com/patroni/patroni
+website_url: https://patroni.readthedocs.io
+docs_url: https://patroni.readthedocs.io
+install_command: pip install patroni
+
+category: Data
+tags: [postgresql, high-availability, failover, python, kubernetes, etcd]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Postgres is the default store for embeddings metadata and experiment tracking,
+  but a single primary is a single point of failure. Patroni automates leader
+  election and failover with etcd, Consul, or Kubernetes so the cluster recovers
+  without a human running pg_ctl promote.
+
+use_cases:
+  - Run automatic failover for Postgres that stores ML experiment metadata
+  - Deploy a Patroni cluster on Kubernetes next to training workloads
+  - Keep replicas in sync with etcd or Consul as the DCS for leader election
+  - Fail over a feature-store Postgres without manual promotion scripts

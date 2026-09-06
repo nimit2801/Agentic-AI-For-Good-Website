@@ -1,0 +1,25 @@
+name: Nextcloud
+description: Self-hosted file sync, sharing, and collaboration platform. Stores datasets, model artifacts, and team documents with access control so ML groups can keep training data on their own servers instead of a public cloud drive.
+tagline: Self-hosted file sync and collaboration for team data
+
+github_url: https://github.com/nextcloud/server
+website_url: https://nextcloud.com
+docs_url: https://docs.nextcloud.com
+
+category: Data
+tags: [file-sync, self-hosted, collaboration, storage, datasets, agpl]
+pricing: freemium
+is_open_source: true
+license: AGPL-3.0
+
+problem_solved: |
+  ML teams need a place to share datasets and checkpoints without dumping them
+  on consumer cloud drives that lack access control. Nextcloud is a self-hosted
+  file platform with sharing, versions, and SSO so artifacts stay on your
+  infrastructure while still being easy to browse and sync.
+
+use_cases:
+  - Host shared training datasets and model checkpoints on your own servers
+  - Sync experiment folders across laptops with access-controlled sharing
+  - Replace consumer cloud drives for internal ML documentation and data drops
+  - Version and recover large files without putting them in git
