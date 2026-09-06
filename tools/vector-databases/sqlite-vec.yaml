@@ -1,0 +1,28 @@
+name: sqlite-vec
+description: Tiny vector search extension for SQLite that stores float, int8, and binary embeddings in vec0 virtual tables and runs KNN queries anywhere SQLite runs, including WASM, laptops, and edge devices. Successor to sqlite-vss with no extra native dependencies.
+tagline: Vector search as a SQLite extension that runs anywhere
+
+github_url: https://github.com/asg017/sqlite-vec
+website_url: https://alexgarcia.xyz/sqlite-vec/
+docs_url: https://alexgarcia.xyz/sqlite-vec/
+install_command: |
+  pip install sqlite-vec
+  npm install sqlite-vec
+
+category: Vector DB
+tags: [sqlite, vector-search, embeddings, knn, local-first, python, wasm, rag]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Most vector databases need a separate server, Docker stack, or heavy native
+  library. sqlite-vec loads as a SQLite extension so you can store embeddings
+  next to application rows, run KNN in SQL, and ship local RAG or on-device
+  search without standing up Pinecone, pgvector, or a sidecar process.
+
+use_cases:
+  - Build local RAG over documents stored in SQLite with KNN on embeddings
+  - Ship on-device semantic search in a desktop or mobile app with one database file
+  - Prototype vector search in notebooks without running a vector DB server
+  - Query embeddings from Python, Node, Go, or WASM using the same vec0 tables

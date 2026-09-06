@@ -1,0 +1,26 @@
+name: Pixeltable
+description: Unified multimodal backend for AI data apps. One Python API stores images, video, audio, and documents, runs models as computed columns, indexes embeddings, and versions data so you do not glue blob storage, a vector DB, and an orchestrator together.
+tagline: Multimodal database, orchestration, and serving in one Python API
+
+github_url: https://github.com/pixeltable/pixeltable
+website_url: https://www.pixeltable.com
+docs_url: https://docs.pixeltable.com
+install_command: pip install pixeltable
+
+category: Data
+tags: [multimodal, python, embeddings, data-pipeline, rag, computer-vision, orchestration]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Multimodal AI apps usually stitch S3, Postgres, a vector store, and Airflow
+  just to chunk media, run models, and serve embeddings. Pixeltable puts storage,
+  computed columns, incremental inference, and versioning in one Python table
+  so new rows trigger chunking and embeddings without glue scripts.
+
+use_cases:
+  - Store images, video, and documents in one table and run models as computed columns
+  - Build a RAG pipeline where chunking and embeddings update incrementally on insert
+  - Export Pixeltable tables to Parquet or PyTorch datasets for training
+  - Version multimodal datasets and recompute stale columns after a model change

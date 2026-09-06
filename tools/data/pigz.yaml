@@ -1,0 +1,26 @@
+name: pigz
+description: Parallel gzip implementation by Mark Adler that uses multiple cores to compress and decompress gzip streams while staying fully compatible with gzip. Speeds up packing of training datasets, logs, and model artifacts on multi-core machines without changing the .gz format.
+tagline: Multi-core gzip for large datasets and artifacts
+
+github_url: https://github.com/madler/pigz
+website_url: https://zlib.net/pigz/
+docs_url: https://zlib.net/pigz/
+install_command: brew install pigz
+
+category: Data
+tags: [compression, gzip, parallel, datasets, cli, zlib, data-pipeline]
+pricing: free
+is_open_source: true
+license: Zlib
+
+problem_solved: |
+  Single-threaded gzip leaves most CPU cores idle while compressing multi-gigabyte
+  training dumps, logs, and checkpoints. pigz is a drop-in gzip replacement that
+  splits compression across cores, cutting wall-clock time for dataset packaging
+  and artifact shipping while remaining compatible with standard .gz tools.
+
+use_cases:
+  - Compress multi-gigabyte training datasets across all CPU cores before upload
+  - Speed up gzip of experiment logs and checkpoint tarballs in CI pipelines
+  - Decompress large .gz dumps in parallel when staging data for training jobs
+  - Replace gzip in data packaging scripts without changing the on-disk format

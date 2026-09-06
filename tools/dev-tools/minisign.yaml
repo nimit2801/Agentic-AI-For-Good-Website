@@ -1,0 +1,26 @@
+name: minisign
+description: Dead-simple file signing tool using Ed25519. Creates compact signatures you can verify without a GPG keyring, with OpenBSD signify compatibility. Ideal for signing model weights, dataset releases, and CLI binaries that ML teams ship to users.
+tagline: Simple Ed25519 signatures for files and releases
+
+github_url: https://github.com/jedisct1/minisign
+website_url: https://jedisct1.github.io/minisign/
+docs_url: https://jedisct1.github.io/minisign/
+install_command: brew install minisign
+
+category: Dev Tools
+tags: [cryptography, signing, ed25519, security, cli, releases, supply-chain]
+pricing: free
+is_open_source: true
+license: ISC
+
+problem_solved: |
+  GPG-based release signing is heavy for teams that just need to prove a model
+  checkpoint or binary was not tampered with. minisign signs files with Ed25519
+  in a few commands, produces tiny .minisig files, and lets users verify with a
+  short public key instead of importing a full OpenPGP keyring.
+
+use_cases:
+  - Sign model weight archives and dataset tarballs before publishing a release
+  - Verify downloaded CLI tools and ML binaries against a published public key
+  - Add compact signatures to GitHub release assets without operating GPG
+  - Check OpenBSD signify-compatible signatures in supply-chain CI gates
