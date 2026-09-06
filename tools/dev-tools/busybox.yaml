@@ -1,0 +1,26 @@
+name: BusyBox
+description: Tiny Unix utility suite that packs common commands like sh, wget, tar, and grep into one binary. BusyBox is the default userland in Alpine containers and many ML images where a full GNU toolchain is too large.
+tagline: Tiny Unix utilities in a single binary
+
+github_url: https://github.com/mirror/busybox
+website_url: https://www.busybox.net/
+docs_url: https://www.busybox.net/downloads/BusyBox.html
+
+category: Dev Tools
+tags: [cli, linux, containers, alpine, embedded, shell]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  GPU and inference containers often cannot ship a full GNU userland, so
+  debug shells, wget of checkpoints, and tar of datasets fail inside the
+  image. BusyBox provides the common Unix tools in one small binary so
+  Alpine-based training and serving images still have a usable shell.
+
+use_cases:
+  - Debug an Alpine-based training container with a shell, ps, and wget
+  - Fetch a checkpoint inside a minimal inference image without installing curl
+  - Unpack dataset tarballs in CI images that only ship BusyBox tar
+  - Build slim ML Docker images that still include a POSIX-like userland
+  - Inspect processes and logs in distroless-adjacent GPU runtime containers
