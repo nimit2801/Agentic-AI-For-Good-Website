@@ -1,0 +1,28 @@
+name: htop
+description: An interactive process viewer for Linux and Unix that shows CPU, memory, and process trees in a full-screen TUI. htop lets you sort, filter, and kill jobs so you can see which training or inference process is starving a shared machine.
+tagline: Interactive process viewer for CPU and memory
+
+github_url: https://github.com/htop-dev/htop
+website_url: https://htop.dev/
+docs_url: https://htop.dev/
+
+install_command: brew install htop
+
+category: Monitoring
+tags: [processes, tui, linux, cpu, memory, cli]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  top is hard to read when dozens of Python training workers share a box, and you
+  cannot easily kill a runaway process from the same view. htop shows a live process
+  tree with CPU and memory so you can find the job hogging RAM before the OOM killer
+  takes down the rest of the node.
+
+use_cases:
+  - Find which Python training worker is consuming all RAM on a shared GPU box
+  - Kill a stuck data-loader process without rebooting the machine
+  - Watch CPU and memory while an inference server starts under load
+  - Inspect process trees for distributed training launchers like torchrun
+  - Filter processes by user on a multi-tenant login node

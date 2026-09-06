@@ -1,0 +1,28 @@
+name: Wireshark
+description: A network protocol analyzer that captures and inspects packets across hundreds of protocols. Wireshark lets you debug HTTP, gRPC, TLS, and custom RPC between agents, model servers, and vector databases when application logs are not enough.
+tagline: Capture and inspect network packets across protocols
+
+github_url: https://github.com/wireshark/wireshark
+website_url: https://www.wireshark.org
+docs_url: https://www.wireshark.org/docs/
+
+install_command: brew install wireshark
+
+category: Dev Tools
+tags: [networking, packets, debugging, tls, http, cli]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  When an agent cannot reach a model API, logs often show only a timeout. Wireshark
+  captures the packets so you can see TLS handshakes, HTTP status, DNS, and payload
+  sizes, which is how you debug gRPC inference, webhook delivery, and vector-DB
+  connections that fail below the application layer.
+
+use_cases:
+  - Capture HTTP and gRPC traffic between an agent and a local model server
+  - Debug TLS handshake failures to an LLM gateway or vector database
+  - Inspect DNS and TCP timing when a training job cannot pull data
+  - Filter packets for a Kubernetes Service IP during an inference outage
+  - Teach a team how agent RPC actually looks on the wire
