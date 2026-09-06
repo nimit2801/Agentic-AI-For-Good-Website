@@ -1,0 +1,23 @@
+name: Infisical
+description: Open-source secrets, certificates, and privileged-access platform that syncs API keys and configs across apps, CI, and infrastructure. Infisical keeps LLM keys, database credentials, and model-registry tokens out of git and environment sprawl.
+tagline: Open-source secrets manager for teams and infrastructure
+
+github_url: https://github.com/Infisical/infisical
+website_url: https://infisical.com
+docs_url: https://infisical.com/docs/documentation/getting-started/introduction
+install_command: brew install infisical
+
+category: Dev Tools
+tags: [secrets-management, security, cli, devops, environment-variables, pki]
+pricing: freemium
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  ML stacks juggle provider API keys, feature-store passwords, and cloud tokens that leak through .env files, CI logs, and shared Slack messages. Infisical centralizes those secrets, syncs them into runtimes and pipelines, and self-hosts or runs as cloud so training jobs and agent services get credentials without committing them to the repo.
+
+use_cases:
+  - Inject OpenAI, Anthropic, and vector-DB keys into agent services without storing them in git
+  - Sync environment configs from Infisical into Kubernetes, CI, and local .env files for ML apps
+  - Rotate model-registry and cloud-storage credentials used by training jobs from one dashboard
+  - Self-host a secrets backend for a research lab that cannot put keys in a vendor vault

@@ -1,0 +1,23 @@
+name: Conductor
+description: Open-source durable execution engine for microservices and AI agents. Conductor persists every step of a workflow graph so LLM loops, MCP tool calls, human approvals, and retries survive crashes and can be inspected, replayed, or recovered.
+tagline: Durable workflow engine for agents and microservices
+
+github_url: https://github.com/conductor-oss/conductor
+website_url: https://conductor-oss.org
+docs_url: https://docs.conductor-oss.org/
+install_command: npm install -g @conductor-oss/conductor-cli
+
+category: Agents
+tags: [java, workflows, durable-execution, agents, orchestration, mcp, microservices]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Agent loops and multi-step microservice jobs die when a process restarts, and code-first orchestrators couple business logic to replay rules. Conductor stores the orchestration graph and every task result, so workers in any language can poll, fail, retry, or wait for humans while the engine keeps durable state. Native LLM and MCP tasks let you run think-act agents without hiding control flow inside a framework.
+
+use_cases:
+  - Run a think-act agent loop with MCP tool calls that survives worker crashes mid-iteration
+  - Orchestrate RAG pipelines as versioned graphs with retries, timeouts, and human approval gates
+  - Coordinate polyglot workers that poll Conductor for training, evaluation, or data-prep tasks
+  - Replay or restart a failed multi-step agent workflow from the persisted execution history
