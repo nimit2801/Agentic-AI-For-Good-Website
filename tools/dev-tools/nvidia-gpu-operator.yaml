@@ -1,0 +1,26 @@
+name: NVIDIA GPU Operator
+description: NVIDIA GPU Operator automates GPU software on Kubernetes. It installs drivers, the container toolkit, device plugin, DCGM exporter, and related components so training and inference pods can request GPUs without hand-maintaining node images.
+tagline: Automate GPU drivers and device plugins on Kubernetes
+
+github_url: https://github.com/NVIDIA/gpu-operator
+website_url: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html
+docs_url: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html
+
+category: Dev Tools
+tags: [nvidia, gpu, kubernetes, operator, dcgm, device-plugin, cuda]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Running GPUs on Kubernetes usually means baking drivers, nvidia-container-toolkit, and
+  the device plugin into every node image, then keeping them in sync across upgrades.
+  GPU Operator watches the cluster and installs those components as containers so GPU
+  nodes come up ready for training and inference without custom AMIs.
+
+use_cases:
+  - Provision NVIDIA drivers and the GPU device plugin on a new Kubernetes GPU node pool
+  - Expose DCGM metrics so Prometheus can scrape GPU health on training clusters
+  - Let inference pods request nvidia.com/gpu without custom node images
+  - Upgrade CUDA driver stacks on GPU nodes through the operator instead of rebuilds
+  - Run mixed CPU and GPU node groups with GPU software only where GPUs exist
