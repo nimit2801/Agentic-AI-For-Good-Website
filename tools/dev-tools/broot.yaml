@@ -1,0 +1,28 @@
+name: broot
+description: Interactive directory tree navigator that shows a condensed view of large folders. broot helps you find bloated experiment dirs, dataset shards, and nested caches without waiting on a full recursive ls.
+tagline: Interactive tree navigator for large directories
+
+github_url: https://github.com/Canop/broot
+website_url: https://dystroy.org/broot
+docs_url: https://dystroy.org/broot/documentation/
+
+install_command: brew install broot
+
+category: Dev Tools
+tags: [cli, tui, file-manager, rust, datasets]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  find and du take too long on a dataset tree with tens of thousands of
+  files, and you still cannot jump into the noisy subdirectory. broot shows
+  a live condensed tree so you can locate oversized experiment folders and
+  nested caches without waiting on a full recursive listing.
+
+use_cases:
+  - Find which experiment subdirectory is consuming unexpected disk
+  - Jump into a nested dataset folder without chaining cd
+  - Preview file sizes while deciding what to delete from a GPU node
+  - Search a large repo tree by name from the terminal
+  - Navigate caches and virtualenv dirs that ls hides in noise

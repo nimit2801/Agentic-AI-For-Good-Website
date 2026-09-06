@@ -1,0 +1,28 @@
+name: duf
+description: Disk usage and free-space utility that presents a readable table of mounts, sizes, and percent used. duf replaces df on GPU boxes so you can see which disk is about to fill with checkpoints and datasets.
+tagline: Readable disk usage table for mounts and free space
+
+github_url: https://github.com/muesli/duf
+website_url: https://github.com/muesli/duf
+docs_url: https://github.com/muesli/duf
+
+install_command: brew install duf
+
+category: Dev Tools
+tags: [disk, cli, monitoring, linux, storage]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  df output is hard to scan when a node has NFS, local NVMe, and a Docker
+  overlay, and a full disk kills training mid-epoch. duf prints a color
+  table of mounts and free space so you can see which volume is filling with
+  checkpoints before the job dies.
+
+use_cases:
+  - Check free space on GPU node NVMe before a long training run
+  - Find which mount holds overflowing checkpoint directories
+  - Compare local disk vs NFS capacity on a shared cluster login node
+  - Spot a Docker overlay filling up from intermediate images
+  - Script a pre-flight disk check in a training launch wrapper

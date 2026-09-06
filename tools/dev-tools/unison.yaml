@@ -1,0 +1,28 @@
+name: unison
+description: Bidirectional file synchronizer that keeps two replicas in sync over SSH or a socket. unison is useful when a laptop and a GPU node both edit configs, notebooks, and small artifacts and you need a two-way merge instead of one-way rsync.
+tagline: Bidirectional file sync between two machines
+
+github_url: https://github.com/bcpierce00/unison
+website_url: https://github.com/bcpierce00/unison
+docs_url: https://github.com/bcpierce00/unison/wiki
+
+install_command: brew install unison
+
+category: Dev Tools
+tags: [sync, cli, ssh, backup, datasets]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  rsync is one-way, so edits on a laptop and a GPU node overwrite each
+  other if you copy the wrong direction. unison compares both sides,
+  detects conflicts, and syncs notebooks, configs, and small artifacts
+  bidirectionally over SSH.
+
+use_cases:
+  - Keep training configs in sync between a laptop and a GPU workstation
+  - Two-way sync of notebooks without clobbering remote edits
+  - Replicate a small artifact directory after working on both machines
+  - Detect conflicting experiment YAML files before a run
+  - Sync a project tree over SSH when git is the wrong tool for large files

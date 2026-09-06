@@ -1,0 +1,28 @@
+name: coreutils
+description: GNU file, shell, and text utilities including ls, cp, mv, sort, and sha256sum. coreutils is the baseline CLI toolkit on Linux GPU nodes and the Homebrew formula that gives macOS the GNU variants used in training scripts.
+tagline: GNU file, shell, and text command-line utilities
+
+github_url: https://github.com/coreutils/coreutils
+website_url: https://www.gnu.org/software/coreutils/
+docs_url: https://www.gnu.org/software/coreutils/manual/coreutils.html
+
+install_command: brew install coreutils
+
+category: Dev Tools
+tags: [cli, gnu, linux, shell, scripting]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  Training scripts assume GNU ls, cp, timeout, and sha256sum flags that
+  BSD/macOS utilities do not share. coreutils provides the GNU versions so
+  dataset checksums, timeouts, and recursive copies behave the same on a
+  laptop and a Linux GPU node.
+
+use_cases:
+  - Checksum dataset shards with sha256sum before a training run
+  - Use GNU timeout around a hanging data-download step
+  - Recursively copy experiment dirs with GNU cp flags
+  - Sort and unique large ID lists from a data pipeline
+  - Align macOS developer machines with Linux cluster coreutils behavior

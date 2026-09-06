@@ -1,0 +1,28 @@
+name: difftastic
+description: Structural diff that understands syntax, so it compares functions and AST nodes instead of raw lines. difftastic makes code review of generated agent patches and refactors easier than a line-oriented git diff.
+tagline: Syntax-aware structural diff for code review
+
+github_url: https://github.com/Wilfred/difftastic
+website_url: https://difftastic.wilfred.me.uk/
+docs_url: https://difftastic.wilfred.me.uk/
+
+install_command: brew install difftastic
+
+category: Dev Tools
+tags: [diff, git, cli, rust, code-review]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Line diffs explode when an agent reformats a file or moves a function, so
+  reviewers cannot see the real change. difftastic compares syntax trees so
+  you can review generated Python, TypeScript, and config patches by language
+  structure instead of wrapping noise.
+
+use_cases:
+  - Review agent-generated refactors without format-only noise
+  - Diff two versions of a training config with real structural changes
+  - Compare generated vs handwritten Python before merging a PR
+  - Use as git external diff for language-aware reviews
+  - Inspect JSON and YAML experiment configs that reordered keys
