@@ -1,0 +1,26 @@
+name: Beyla
+description: Grafana Beyla is an eBPF auto-instrumentation agent that captures HTTP, gRPC, and network metrics from applications without code changes or sidecars. It exports OpenTelemetry and Prometheus telemetry so services get RED metrics and traces with zero SDK work.
+tagline: Zero-code eBPF auto-instrumentation for apps and networks
+
+github_url: https://github.com/grafana/beyla
+website_url: https://grafana.com/oss/beyla-ebpf/
+docs_url: https://grafana.com/docs/beyla/latest/
+
+category: Monitoring
+tags: [ebpf, opentelemetry, prometheus, grafana, tracing, metrics, kubernetes]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Instrumenting every microservice with an OpenTelemetry SDK is slow, and sidecars add
+  operational cost. Beyla uses eBPF to observe HTTP, gRPC, and network traffic from the
+  kernel, then exports Prometheus metrics and OpenTelemetry traces so GPU clusters and
+  agent APIs become observable without touching application code.
+
+use_cases:
+  - Auto-instrument HTTP and gRPC model-serving APIs without adding an SDK
+  - Export RED metrics from agent microservices to Prometheus or Grafana Cloud
+  - Capture traces for a polyglot stack where some services cannot take a language agent
+  - Observe Kubernetes workloads at the network layer when you cannot rebuild images
+  - Fill gaps between application APM and kernel-level visibility on GPU inference nodes

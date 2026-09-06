@@ -1,0 +1,26 @@
+name: Prometheus Operator
+description: Prometheus Operator manages Prometheus, Alertmanager, and related monitoring components on Kubernetes via CRDs. Teams declare ServiceMonitors and PrometheusRules so GPU clusters and agent workloads get scrape configs and alerts without editing Prometheus YAML by hand.
+tagline: Kubernetes CRDs for Prometheus, Alertmanager, and scrape config
+
+github_url: https://github.com/prometheus-operator/prometheus-operator
+website_url: https://prometheus-operator.dev
+docs_url: https://prometheus-operator.dev/docs/getting-started/introduction/
+
+category: Monitoring
+tags: [prometheus, kubernetes, operator, alerting, servicemonitor, crd]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Running Prometheus on Kubernetes by hand means stitching scrape configs, Alertmanager,
+  and service discovery every time a new workload appears. Prometheus Operator introduces
+  CRDs such as Prometheus, ServiceMonitor, and PrometheusRule so GPU clusters and agent
+  services can opt into scraping and alerting as Kubernetes objects.
+
+use_cases:
+  - Deploy a Prometheus instance on Kubernetes with CRDs instead of raw ConfigMaps
+  - Add a ServiceMonitor so a new model-serving Deployment is scraped automatically
+  - Manage Alertmanager and PrometheusRules as GitOps objects alongside app manifests
+  - Watch GPU and DCGM exporters without rewriting prometheus.yml on every change
+  - Run multiple Prometheus shards for large agent and training clusters

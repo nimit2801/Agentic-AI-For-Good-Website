@@ -1,0 +1,26 @@
+name: blackbox_exporter
+description: Prometheus Blackbox Exporter probes HTTP, HTTPS, DNS, TCP, ICMP, and gRPC endpoints from the outside so you can alert when model APIs, vector databases, or agent webhooks go dark even if in-process metrics still look healthy.
+tagline: Probe HTTP, DNS, TCP, and ICMP targets from the outside
+
+github_url: https://github.com/prometheus/blackbox_exporter
+website_url: https://prometheus.io/
+docs_url: https://github.com/prometheus/blackbox_exporter
+
+category: Monitoring
+tags: [prometheus, probing, http, uptime, alerting, grpc, dns]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  In-process metrics can look fine while users cannot reach the service. Blackbox Exporter
+  probes HTTP, HTTPS, DNS, TCP, ICMP, and gRPC from outside the process so Prometheus can
+  alert on availability, TLS expiry, and latency of model endpoints and agent webhooks
+  the way a client would see them.
+
+use_cases:
+  - Probe a model inference HTTP API and alert when status or latency degrades
+  - Check TLS certificate expiry on public vector-database and LLM gateway endpoints
+  - ICMP or TCP probe GPU cluster login nodes and internal agent services
+  - DNS probe that the serving hostname still resolves before a traffic spike
+  - gRPC health probes against inference servers that do not expose a /metrics path

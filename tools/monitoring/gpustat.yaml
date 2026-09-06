@@ -1,0 +1,28 @@
+name: gpustat
+description: A command-line utility for querying NVIDIA GPU status. gpustat shows utilization, memory, temperature, and which processes own each GPU in a compact table, making multi-GPU training boxes easier to inspect than raw nvidia-smi.
+tagline: Compact nvidia-smi-style GPU status in one command
+
+github_url: https://github.com/wookayin/gpustat
+website_url: https://pypi.org/project/gpustat/
+docs_url: https://github.com/wookayin/gpustat
+
+install_command: pip install gpustat
+
+category: Monitoring
+tags: [gpu, nvidia, nvidia-smi, python, metrics, training, cli]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  nvidia-smi dumps a dense table that is hard to scan when several training jobs share a box.
+  gpustat prints a one-line-per-GPU view with utilization, memory, temperature, and the
+  processes holding the device, so ML engineers can see who is occupying which GPU before
+  launching another job or debugging an OOM.
+
+use_cases:
+  - Check which process owns each GPU on a shared training machine before starting a run
+  - Watch GPU memory and utilization while a fine-tune or inference job is in flight
+  - Script a watch loop that alerts when a GPU is idle or over temperature
+  - Inspect multi-GPU nodes in a cluster login session without parsing nvidia-smi XML
+  - Confirm a container actually received the GPUs it requested after a Kubernetes launch
