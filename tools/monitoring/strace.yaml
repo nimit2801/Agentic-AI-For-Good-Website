@@ -1,0 +1,28 @@
+name: strace
+description: Linux diagnostic tool that traces system calls and signals for a process. strace shows why a training job hangs on open, read, or connect so you can debug missing files, blocked sockets, and permission errors.
+tagline: Trace Linux system calls for hanging processes
+
+github_url: https://github.com/strace/strace
+website_url: https://strace.io/
+docs_url: https://man7.org/linux/man-pages/man1/strace.1.html
+
+install_command: brew install strace
+
+category: Monitoring
+tags: [linux, debugging, syscalls, cli, diagnostics]
+pricing: free
+is_open_source: true
+license: LGPL-2.1-or-later
+
+problem_solved: |
+  When a Python training job hangs with no traceback, logs do not show the
+  kernel call it is stuck on. strace prints open, read, write, and connect
+  so you can see a missing data file, a blocked NFS mount, or a refused
+  model-server socket without attaching a full debugger.
+
+use_cases:
+  - Find which file a data loader is stuck opening on a GPU node
+  - See why an inference process cannot connect to a vector database
+  - Diagnose permission errors on checkpoint directories
+  - Trace unexpected network calls from a training container
+  - Confirm a process is blocked on NFS rather than GPU compute
