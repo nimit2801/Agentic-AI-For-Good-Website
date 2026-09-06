@@ -1,0 +1,28 @@
+name: masscan
+description: Asynchronous TCP port scanner that can sweep large address ranges in minutes. masscan inventories which hosts expose SSH, Jupyter, or inference ports across a lab network faster than a sequential nmap scan.
+tagline: Asynchronous scanner for large TCP port ranges
+
+github_url: https://github.com/robertdavidgraham/masscan
+website_url: https://github.com/robertdavidgraham/masscan
+docs_url: https://github.com/robertdavidgraham/masscan
+
+install_command: brew install masscan
+
+category: Dev Tools
+tags: [networking, security, scanning, cli, tcp]
+pricing: free
+is_open_source: true
+license: AGPL-3.0
+
+problem_solved: |
+  nmap is thorough but slow when you need to know which of hundreds of lab
+  machines still expose Jupyter or an inference port. masscan sends SYN
+  packets asynchronously so you can inventory a whole subnet in minutes and
+  then follow up with a targeted nmap on the hosts that answered.
+
+use_cases:
+  - Sweep a lab subnet for accidental Jupyter and TensorBoard ports
+  - Inventory which GPU nodes still expose an inference HTTP port
+  - Find SSH listeners after a cluster reprovision
+  - Feed live hosts into a slower nmap service scan
+  - Recheck firewall rules after opening a model API to the office network

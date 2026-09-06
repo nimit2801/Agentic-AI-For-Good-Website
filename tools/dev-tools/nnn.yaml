@@ -1,0 +1,28 @@
+name: nnn
+description: Tiny, fast terminal file manager with a small binary and optional plugins. nnn is built for navigating huge directory trees on GPU boxes where a heavier TUI would hitch on tens of thousands of dataset shards.
+tagline: Tiny terminal file manager for huge directories
+
+github_url: https://github.com/jarun/nnn
+website_url: https://github.com/jarun/nnn
+docs_url: https://github.com/jarun/nnn/wiki
+
+install_command: brew install nnn
+
+category: Dev Tools
+tags: [cli, tui, file-manager, datasets, linux, productivity]
+pricing: free
+is_open_source: true
+license: BSD-2-Clause
+
+problem_solved: |
+  GUI file managers and heavy TUIs stall when a dataset directory has tens of
+  thousands of shard files. nnn is a tiny, fast file manager so you can cd,
+  filter, and batch-select on a GPU node without waiting for a full directory
+  listing to render.
+
+use_cases:
+  - Navigate a large sharded dataset directory over SSH
+  - Filter files by name when hunting for a specific checkpoint
+  - Batch-select logs to copy off a training box
+  - Open a disk-usage view of an experiment folder that grew too large
+  - Use plugins to preview images without leaving the terminal
