@@ -1,0 +1,28 @@
+name: git-absorb
+description: Automatically creates git fixup commits by matching staged hunks to later commits in a branch. git-absorb is the faster way to fold review fixes into a feature branch of training scripts or catalog YAML without hand-building rebase todos.
+tagline: Automatic git commit --fixup
+
+github_url: https://github.com/tummychow/git-absorb
+website_url: https://github.com/tummychow/git-absorb
+docs_url: https://crates.io/crates/git-absorb
+
+install_command: brew install git-absorb
+
+category: Dev Tools
+tags: [git, cli, rust, rebase, workflow]
+pricing: free
+is_open_source: true
+license: BSD-3-Clause
+
+problem_solved: |
+  Review comments on a long training-script branch mean many tiny fix
+  commits that you then rebase by hand. git-absorb maps staged hunks to
+  the right earlier commits so you can autosquash without writing a rebase
+  todo.
+
+use_cases:
+  - Fold PR review fixes into the original training-script commits
+  - Absorb YAML catalog nits into the add-tool commit before squash
+  - Clean a feature branch of ML infra changes before merge
+  - Auto-fixup staged hunks after a CI lint failure
+  - Keep a data-pipeline branch history readable without manual rebase

@@ -1,0 +1,28 @@
+name: gopass
+description: Team-oriented Unix password manager built on GPG and Git, with a CLI for secrets. gopass stores API keys, cloud credentials, and Hugging Face tokens in a shared encrypted store instead of dumping them into .env files.
+tagline: Team password manager for Unix, GPG, and Git
+
+github_url: https://github.com/gopasspw/gopass
+website_url: https://www.gopass.pw/
+docs_url: https://github.com/gopasspw/gopass/blob/master/docs/index.md
+
+install_command: brew install gopass
+
+category: Dev Tools
+tags: [secrets, passwords, gpg, git, cli, security]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  ML teams share OpenAI keys, cloud creds, and Hugging Face tokens in Slack
+  or unencrypted .env files. gopass keeps those secrets in a GPG-encrypted
+  Git store so training jobs and local shells can fetch credentials without
+  committing them.
+
+use_cases:
+  - Store OpenAI and Hugging Face tokens for a research team
+  - Check out cloud credentials on a GPU node without a plaintext .env
+  - Rotate an API key in a shared Git-backed secret store
+  - Inject secrets into a local training script from gopass show
+  - Onboard a new engineer to project credentials without Slack pastes

@@ -1,0 +1,28 @@
+name: fswatch
+description: Cross-platform file change monitor with backends for inotify, FSEvents, kqueue, and more. fswatch runs a command when dataset files, configs, or model checkpoints change, which is useful for local training and data pipelines.
+tagline: Cross-platform file change monitor
+
+github_url: https://github.com/emcrisostomo/fswatch
+website_url: https://emcrisostomo.github.io/fswatch/
+docs_url: https://emcrisostomo.github.io/fswatch/doc/
+
+install_command: brew install fswatch
+
+category: Dev Tools
+tags: [filesystem, watch, cli, inotify, macos, linux]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  Retraining or re-exporting when a config or data file changes usually
+  means a manual rerun. fswatch monitors directories across macOS and
+  Linux and runs a command on change so local pipelines stay in sync
+  without a heavy watcher framework.
+
+use_cases:
+  - Rerun a data-prep script when new files land in a drop folder
+  - Reload a local inference server when a prompt template changes
+  - Watch Hydra config dirs and kick a smoke training job
+  - Sync a dataset folder to object storage on change
+  - Trigger a test suite when shell launch scripts are edited

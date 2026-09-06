@@ -1,0 +1,28 @@
+name: dua
+description: Fast disk usage analyzer and interactive cleaner written in Rust. dua shows which checkpoint dirs, caches, and datasets are eating a GPU node's disk so you can delete them without waiting on du.
+tagline: Fast disk usage analyzer and cleaner
+
+github_url: https://github.com/Byron/dua-cli
+website_url: https://github.com/Byron/dua-cli
+docs_url: https://github.com/Byron/dua-cli
+
+install_command: brew install dua-cli
+
+category: Dev Tools
+tags: [disk, cli, rust, storage, cleanup]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  GPU nodes fill up with old checkpoints, Hugging Face caches, and
+  unpacked datasets, and du -sh is too slow to hunt the culprit.
+  dua walks the tree quickly and can delete selected dirs so you
+  reclaim disk before the next training job fails.
+
+use_cases:
+  - Find which checkpoint run is filling a GPU node's disk
+  - Delete stale Hugging Face cache dirs interactively
+  - Compare dataset shard sizes before a copy to object storage
+  - Clean leftover experiment dirs after a failed sweep
+  - Inspect disk use of a Docker build cache on a shared machine
