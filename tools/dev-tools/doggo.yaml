@@ -1,0 +1,26 @@
+name: doggo
+description: Command-line DNS client written in Go that replaces dig with colorized tabular output and modern transports including DNS-over-HTTPS, DNS-over-TLS, DNS-over-QUIC, and DNSCrypt. JSON output makes it easy to script DNS lookups in CI, infra debugging, and ML service discovery.
+tagline: Human-friendly DNS client with DoH, DoT, DoQ, and JSON output
+
+github_url: https://github.com/mr-karan/doggo
+website_url: https://doggo.mrkaran.dev/
+docs_url: https://doggo.mrkaran.dev/docs/
+install_command: brew install doggo
+
+category: Dev Tools
+tags: [dns, cli, golang, doh, networking, developer-tools, debugging]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  Classic dig output is hard to scan and does not speak modern encrypted DNS
+  transports out of the box. doggo gives colorized, tabular, or JSON DNS answers
+  over DoH, DoT, DoQ, and DNSCrypt so you can debug service discovery, model
+  endpoints, and cluster DNS without wrestling BIND-style records.
+
+use_cases:
+  - Debug DNS for LLM APIs, vector DB hosts, and model registries with readable tables
+  - Query DNS-over-HTTPS or DNS-over-TLS from CI when UDP 53 is blocked
+  - Emit JSON answers and pipe them into scripts that check service discovery
+  - Run reverse lookups and compare resolvers when an inference endpoint fails to resolve
