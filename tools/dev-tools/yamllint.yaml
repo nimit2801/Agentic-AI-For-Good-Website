@@ -1,0 +1,28 @@
+name: yamllint
+description: Linter for YAML files that checks syntax, indentation, duplicates, and style rules. yamllint is the standard gate for Kubernetes manifests, GitHub Actions, and ML config files before they hit a cluster or CI.
+tagline: Linter for YAML files and configs
+
+github_url: https://github.com/adrienverge/yamllint
+website_url: https://yamllint.readthedocs.io/
+docs_url: https://yamllint.readthedocs.io/
+
+install_command: pip install yamllint
+
+category: Dev Tools
+tags: [yaml, linter, python, ci, kubernetes, cli]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  A bad indent or duplicate key in a Kubernetes job or Hydra config
+  only shows up when the training pod fails to start. yamllint checks
+  YAML syntax and style in CI so broken manifests and config files
+  never reach the cluster.
+
+use_cases:
+  - Lint Kubernetes training-job manifests in CI
+  - Catch duplicate keys in Hydra or YAML experiment configs
+  - Validate GitHub Actions workflows before they run GPU jobs
+  - Enforce indent rules on Helm values for inference services
+  - Fail a PR when a dataset YAML has invalid syntax

@@ -1,0 +1,28 @@
+name: VisiData
+description: Terminal spreadsheet for exploring, transforming, and arranging tabular data from CSV, JSON, Parquet, and databases. VisiData lets you open a large training manifest or eval dump in a TUI and filter, join, or plot without loading it into a notebook.
+tagline: Terminal spreadsheet for discovering and arranging data
+
+github_url: https://github.com/saulpw/visidata
+website_url: https://www.visidata.org/
+docs_url: https://www.visidata.org/docs/
+
+install_command: pip install visidata
+
+category: Data
+tags: [csv, tui, tabular, parquet, python, cli]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  Opening a multi-gigabyte CSV of labels or eval scores in Excel or a
+  notebook is slow and often crashes. VisiData streams tabular files in
+  a terminal spreadsheet so you can inspect schema, filter bad rows, and
+  export a clean slice before a training or evaluation run.
+
+use_cases:
+  - Inspect a large dataset manifest CSV without loading it into pandas
+  - Filter eval score dumps to the failing examples before a review
+  - Open Parquet shards from a feature store and check column types
+  - Join two label files in the terminal to find missing IDs
+  - Plot a quick histogram of class counts before oversampling

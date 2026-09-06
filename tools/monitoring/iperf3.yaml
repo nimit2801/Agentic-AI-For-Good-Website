@@ -1,0 +1,28 @@
+name: iperf3
+description: TCP, UDP, and SCTP bandwidth measurement tool for measuring throughput between two hosts. iperf3 is the standard way to check whether a GPU cluster interconnect, object-store path, or VPN can actually carry a training data stream.
+tagline: Measure TCP and UDP network bandwidth between hosts
+
+github_url: https://github.com/esnet/iperf
+website_url: https://software.es.net/iperf/
+docs_url: https://software.es.net/iperf/
+
+install_command: brew install iperf3
+
+category: Monitoring
+tags: [network, bandwidth, benchmarking, tcp, udp, cli]
+pricing: free
+is_open_source: true
+license: BSD-3-Clause
+
+problem_solved: |
+  Slow dataset copies get blamed on the training job when the real limit is
+  the path between nodes. iperf3 measures live TCP and UDP throughput so
+  you can tell a saturated NIC, a bad switch hop, or a VPN cap from a
+  poorly tuned data loader.
+
+use_cases:
+  - Measure bandwidth between a GPU node and an object-store gateway before a dataset pull
+  - Compare TCP throughput on a cluster interconnect vs a public cloud VPN
+  - Confirm a new Ethernet or InfiniBand path can feed distributed training
+  - Reproduce a slow Hugging Face download as a raw network test
+  - Tune window sizes when checkpoint sync between ranks is network-bound
