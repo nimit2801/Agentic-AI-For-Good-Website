@@ -1,0 +1,23 @@
+name: nvitop
+description: Interactive NVIDIA GPU process viewer and Python library that monitors utilization, memory, temperature, and per-process usage. nvitop goes beyond nvidia-smi with a tree view, filtering, and an API for training scripts and cluster dashboards.
+tagline: Interactive NVIDIA GPU process viewer and Python monitoring API
+
+github_url: https://github.com/XuehaiPan/nvitop
+website_url: https://nvitop.readthedocs.io
+docs_url: https://nvitop.readthedocs.io
+install_command: pip install nvitop
+
+category: Monitoring
+tags: [python, nvidia, gpu, monitoring, cuda, training, cli]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  nvidia-smi is a snapshot, not a process manager, and wrapping NVML in every training script is tedious. nvitop gives an interactive tree of GPU processes plus a Python API so you can watch VRAM, kill runaway jobs, and log metrics from PyTorch jobs without building a custom NVML wrapper.
+
+use_cases:
+  - Interactively inspect which PID owns VRAM on a shared training server and kill leaked processes
+  - Log GPU utilization and memory from inside a PyTorch training loop via the nvitop API
+  - Filter GPU processes by user or command when multiple experiments share a node
+  - Replace ad-hoc nvidia-smi watch loops with a tree view of CUDA contexts and host trees
