@@ -1,0 +1,28 @@
+name: shfmt
+description: Shell script formatter and parser with Bash and POSIX support, shipped as the shfmt CLI from mvdan/sh. shfmt keeps training launch scripts, Docker entrypoints, and cluster job files consistent so CI can fail on style instead of a missing quote.
+tagline: Autoformat Bash and POSIX shell scripts
+
+github_url: https://github.com/mvdan/sh
+website_url: https://github.com/mvdan/sh
+docs_url: https://github.com/mvdan/sh#shfmt
+
+install_command: brew install shfmt
+
+category: Dev Tools
+tags: [shell, bash, formatter, cli, lint, golang]
+pricing: free
+is_open_source: true
+license: BSD-3-Clause
+
+problem_solved: |
+  Training launchers and Docker entrypoints are shell scripts that break
+  on a missing quote or inconsistent indentation that reviewers miss.
+  shfmt parses and reformats Bash and POSIX scripts so CI can enforce
+  one style and catch syntax issues before a GPU job is submitted.
+
+use_cases:
+  - Format training launch scripts in CI before a cluster submit
+  - Keep Docker entrypoint.sh files consistent across ML images
+  - Diff a reformatted data-pipeline shell script in code review
+  - Parse Bash in a formatter-aware editor for job templates
+  - Enforce POSIX style on shared cluster utility scripts

@@ -1,0 +1,28 @@
+name: lnav
+description: Curses log file navigator that auto-detects formats, indexes timestamps, and lets you SQL-query logs in a TUI. lnav is built for following training, inference, and pipeline logs without grepping through rotated files by hand.
+tagline: Log file navigator with SQL queries in the terminal
+
+github_url: https://github.com/tstack/lnav
+website_url: https://lnav.org/
+docs_url: https://docs.lnav.org/
+
+install_command: brew install lnav
+
+category: Monitoring
+tags: [logs, tui, sql, observability, cli, debugging]
+pricing: free
+is_open_source: true
+license: BSD-2-Clause
+
+problem_solved: |
+  Training and serving logs are split across rotated files, JSON lines,
+  and syslog, so finding the OOM or a failed batch means a pile of grep.
+  lnav opens many files at once, detects formats, and lets you query
+  timestamps and fields so you can jump to the failure instead of scrolling.
+
+use_cases:
+  - Follow training logs across rotated files while a job is running
+  - SQL-query JSON inference logs for 5xx spikes in a time window
+  - Open Docker and systemd logs together when a GPU node fails to start
+  - Jump to the first traceback in a long data-pipeline log
+  - Diff two eval run logs to see which step started failing
