@@ -1,0 +1,28 @@
+name: mtr
+description: Network diagnostic that combines traceroute and ping into one live view of hop latency and loss. mtr is the go-to tool when a GPU cluster, object store, or Hugging Face download path is slow and you need to see where packets drop.
+tagline: Combined traceroute and ping for path diagnosis
+
+github_url: https://github.com/traviscross/mtr
+website_url: https://www.bitwizard.nl/mtr/
+docs_url: https://github.com/traviscross/mtr
+
+install_command: brew install mtr
+
+category: Monitoring
+tags: [network, traceroute, ping, diagnostics, cli, latency]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  A slow dataset pull or model download can be the NIC, the ISP, or a hop
+  to the object store, and ping or traceroute alone does not show live loss
+  along the path. mtr repeatedly probes every hop so you can see where
+  latency and packet loss start before you blame the training job.
+
+use_cases:
+  - Diagnose packet loss between a GPU node and an S3-compatible object store
+  - Check hop latency when Hugging Face model downloads stall mid-file
+  - Confirm a VPN or office path is dropping packets before a remote training SSH session
+  - Compare paths from a laptop vs a cluster login node to the same API endpoint
+  - Watch live loss while an inference replica cannot reach a vector database

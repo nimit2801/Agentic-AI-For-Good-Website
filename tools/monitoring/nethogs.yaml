@@ -1,0 +1,28 @@
+name: nethogs
+description: Linux net top that groups bandwidth by process so you can see which PID is using the network. nethogs is the classic per-process bandwidth view on GPU nodes when a data loader or checkpoint upload saturates the NIC.
+tagline: Per-process network bandwidth on Linux
+
+github_url: https://github.com/raboof/nethogs
+website_url: https://raboof.github.io/nethogs/
+docs_url: https://github.com/raboof/nethogs
+
+install_command: brew install nethogs
+
+category: Monitoring
+tags: [network, bandwidth, linux, processes, cli, monitoring]
+pricing: free
+is_open_source: true
+license: GPL-2.0
+
+problem_solved: |
+  iftop shows connections but not the owning process, so a noisy data loader
+  and a model download look the same. nethogs groups live bandwidth by PID
+  so you can stop the job saturating a shared GPU node before it starves
+  checkpoint uploads or distributed training all-reduce.
+
+use_cases:
+  - Find which training worker is flooding the NIC during a dataset pull
+  - See if a data loader is saturating a shared cluster uplink
+  - Debug slow checkpoint uploads by watching per-process bandwidth
+  - Identify unexpected outbound traffic from an inference container
+  - Compare network use of distributed training ranks on one machine
