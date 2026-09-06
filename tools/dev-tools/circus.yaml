@@ -1,0 +1,23 @@
+name: Circus
+description: Python process and socket manager built on ZeroMQ that watches, restarts, and scales worker processes from a single config. Circus keeps long-running Python services, data pipeline workers, and model-serving processes alive with sockets, watchers, and a control channel.
+tagline: Process and socket manager for Python workers
+
+github_url: https://github.com/circus-tent/circus
+website_url: https://circus.readthedocs.io
+docs_url: https://circus.readthedocs.io
+install_command: pip install circus
+
+category: Dev Tools
+tags: [python, process-manager, zeromq, sockets, devops, workers, supervision]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Python ML services and data workers crash, leak memory, or need extra processes as load grows. Running them under systemd or a shell loop gives little control over sockets, scaling, or live reconfiguration. Circus supervises watchers and sockets from one INI config, restarts failing processes, and exposes a ZeroMQ control channel so you can add, stop, or inspect workers without taking the stack down.
+
+use_cases:
+  - Supervise model-serving Python workers with automatic restart after crashes or memory limits
+  - Bind sockets once in Circus and hand them to forked workers so reloads do not drop connections
+  - Scale data-pipeline consumers up or down at runtime through the circusctl control channel
+  - Run mixed Python and non-Python watchers from a single circus.ini in a training or inference host
