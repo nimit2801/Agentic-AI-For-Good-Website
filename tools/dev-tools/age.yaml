@@ -1,0 +1,28 @@
+name: age
+description: A simple, modern file encryption tool and Go library with small explicit keys, no config file, and UNIX-style composability. age encrypts files to recipients so secrets, model weights, and dataset dumps can be shared without a heavyweight PKI.
+tagline: Simple, modern file encryption with small explicit keys
+
+github_url: https://github.com/FiloSottile/age
+website_url: https://age-encryption.org
+docs_url: https://github.com/FiloSottile/age
+
+install_command: brew install age
+
+category: Dev Tools
+tags: [encryption, security, secrets, golang, cli, cryptography]
+pricing: free
+is_open_source: true
+license: BSD-3-Clause
+
+problem_solved: |
+  Teams still encrypt model artifacts and env files with ad-hoc OpenSSL commands or
+  bloated PGP setups that are easy to misconfigure. age uses small explicit keys and a
+  single-purpose CLI so you can encrypt files to recipients, decrypt them in pipelines,
+  and avoid a config-heavy PKI for secrets that AI workloads pass around.
+
+use_cases:
+  - Encrypt API keys and .env files before storing them in object storage
+  - Share model checkpoints with a recipient public key instead of a shared password
+  - Decrypt secrets in a CI job that trains or deploys an agent
+  - Replace ad-hoc OpenSSL enc invocations with a composable UNIX filter
+  - Encrypt dataset dumps at rest before uploading them to a training cluster

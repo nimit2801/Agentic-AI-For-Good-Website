@@ -1,0 +1,27 @@
+name: Railway
+description: A deployment platform that builds and runs apps from a Git repo with zero config. Railway provisions databases, env vars, and HTTPS so you can ship agent APIs, MCP servers, and model backends without assembling Kubernetes or a custom CI pipeline.
+tagline: Deploy apps and databases from Git with zero config
+
+github_url: https://github.com/railwayapp/cli
+website_url: https://railway.com
+docs_url: https://docs.railway.com
+
+install_command: npm install -g @railway/cli
+
+category: Dev Tools
+tags: [paas, deployment, hosting, git, databases, cli]
+pricing: freemium
+is_open_source: false
+
+problem_solved: |
+  Shipping an agent API or MCP server still means stitching a Dockerfile, a registry,
+  a database, secrets, and a reverse proxy. Railway builds from Git, provisions backing
+  services, and gives you HTTPS and logs so small AI products can go live without a
+  platform team or a full Kubernetes cluster.
+
+use_cases:
+  - Deploy an agent or MCP server from a GitHub repo with one CLI command
+  - Provision Postgres or Redis next to an inference API without a separate cloud account
+  - Preview environments for pull requests that change a model-serving app
+  - Store secrets and env vars for LLM keys outside application code
+  - Scale a small production AI app without operating Kubernetes
