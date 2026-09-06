@@ -1,0 +1,23 @@
+name: CodeQL
+description: Semantic code analysis engine that treats source as a queryable database so you can find vulnerability variants across a codebase. CodeQL powers GitHub code scanning and is free for open source research, with a CLI and VS Code extension for custom queries.
+tagline: Query code like data to find vulnerability variants
+
+github_url: https://github.com/github/codeql
+website_url: https://codeql.github.com
+docs_url: https://codeql.github.com/docs/
+install_command: brew install codeql
+
+category: Dev Tools
+tags: [security, static-analysis, code-scanning, github, vulnerability, cli]
+pricing: freemium
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Prompt-injection handlers, deserialization, and secret handling in AI apps fail in many similar shapes. Grep and linters miss data-flow variants. CodeQL builds a database of the program and runs QL queries that track taint across files, so one pattern finds every similar bug in Python, Java, JavaScript, and more before it ships.
+
+use_cases:
+  - Scan an agent backend for injection and unsafe deserialization with GitHub code scanning
+  - Write a custom QL query that finds leaked API keys flowing into logs in Python ML services
+  - Build a CodeQL database locally and hunt variants of a bug found in a RAG API
+  - Run CodeQL in CI on open-source AI libraries to block known vulnerability classes

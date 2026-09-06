@@ -1,0 +1,21 @@
+name: nvtop
+description: Interactive GPU and accelerator process monitor in the style of htop. nvtop shows utilization, memory, power, and per-process usage for NVIDIA, AMD, Intel, Apple, Huawei Ascend, and other accelerators used in ML training and inference.
+tagline: htop-style monitor for GPUs and AI accelerators
+
+github_url: https://github.com/Syllo/nvtop
+install_command: brew install nvtop
+
+category: Monitoring
+tags: [gpu, monitoring, nvidia, amd, intel, cli, training, inference]
+pricing: free
+is_open_source: true
+license: GPL-3.0
+
+problem_solved: |
+  Training and inference jobs share GPUs, and nvidia-smi snapshots do not show a live per-process view across vendors. nvtop is an htop-like TUI for utilization, memory, power, and processes on NVIDIA, AMD, Intel, Apple, Ascend, and more, so you can see which job is saturating a box without a vendor-specific dashboard.
+
+use_cases:
+  - Watch GPU memory and utilization while a fine-tune shares a machine with inference workers
+  - Identify which process is hogging VRAM on a multi-user training server
+  - Monitor AMD, Intel, or Apple accelerators with the same TUI used for NVIDIA boxes
+  - SSH into a GPU host and get a live process view without a Prometheus stack

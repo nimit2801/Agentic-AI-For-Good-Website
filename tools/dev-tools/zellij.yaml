@@ -1,0 +1,23 @@
+name: Zellij
+description: Terminal workspace and multiplexer with layouts, floating panes, WASM plugins, and a built-in web client. Zellij gives ML engineers a batteries-included session for training jobs, logs, and editors without sacrificing a simple default UX.
+tagline: Terminal workspace with multiplexer, layouts, and plugins
+
+github_url: https://github.com/zellij-org/zellij
+website_url: https://zellij.dev
+docs_url: https://zellij.dev/documentation/
+install_command: brew install zellij
+
+category: Dev Tools
+tags: [rust, terminal, multiplexer, workspace, cli, plugins, devops]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Training, serving, and data jobs need several terminal panes, persistent sessions, and shared layouts. tmux is powerful but steep. Zellij ships a usable default, named layouts for recurring ML workflows, floating and stacked panes, WASM plugins, and optional web access so a GPU box session stays organized without a heavy custom config.
+
+use_cases:
+  - Save a training layout with logs, GPU monitor, and editor panes that restore on attach
+  - Share a remote GPU-box session through Zellij's web client without exposing raw SSH mux config
+  - Run WASM plugins that surface job status or notes beside a long-running fine-tune
+  - Keep multiple experiment shells in stacked panes instead of a pile of SSH windows
