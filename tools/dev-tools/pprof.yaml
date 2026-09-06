@@ -1,0 +1,22 @@
+name: pprof
+description: Profiling visualization and analysis tool from Google that turns CPU, heap, and contention profiles into interactive graphs and flame charts. pprof is the standard way to inspect Go services, including model-serving and agent backends.
+tagline: Visualize CPU and memory profiles as graphs and flame charts
+
+github_url: https://github.com/google/pprof
+docs_url: https://github.com/google/pprof/blob/main/doc/README.md
+install_command: go install github.com/google/pprof@latest
+
+category: Dev Tools
+tags: [go, profiling, performance, flamegraph, cpu, memory, observability]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Inference proxies, agent APIs, and data workers written in Go hide CPU and memory hotspots until production latency spikes. pprof collects runtime profiles and renders call graphs and flame charts so you can see which handlers, serializers, or embedding calls dominate, then compare before and after a change.
+
+use_cases:
+  - Profile a Go model-serving API to find CPU hotspots in JSON, gRPC, or embedding calls
+  - Capture heap profiles from a long-running agent worker and inspect retained objects
+  - Compare contention profiles before and after a concurrency change in a pipeline
+  - Serve pprof HTTP endpoints in development and pull flame charts from a remote GPU box

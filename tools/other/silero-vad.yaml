@@ -1,0 +1,22 @@
+name: Silero VAD
+description: Pre-trained voice activity detector that flags speech timestamps in audio with a 2 MB PyTorch or ONNX model. Silero VAD runs in under 1 ms per chunk on CPU and is used to trim silence in STT, voice-agent, and dataset-prep pipelines.
+tagline: Fast on-device voice activity detection for speech pipelines
+
+github_url: https://github.com/snakers4/silero-vad
+docs_url: https://github.com/snakers4/silero-vad/wiki
+install_command: pip install silero-vad
+
+category: Other
+tags: [python, pytorch, onnx, speech, vad, audio, stt]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  Speech-to-text, voice agents, and audio datasets waste compute on silence and noise. Cloud VAD APIs add latency and cost. Silero VAD is a 2 MB MIT-licensed model that returns speech timestamps in milliseconds on CPU via PyTorch or ONNX, so you can gate ASR, chunk recordings, and clean training audio without a GPU or a hosted detector.
+
+use_cases:
+  - Gate a streaming STT or voice-agent pipeline so the LLM only sees speech segments
+  - Strip silence from call-center and podcast audio before transcription or dataset export
+  - Run on-device VAD in telephony bots at 8 kHz or 16 kHz without a GPU
+  - Batch-detect speech regions when preparing multilingual audio corpora for ASR training
