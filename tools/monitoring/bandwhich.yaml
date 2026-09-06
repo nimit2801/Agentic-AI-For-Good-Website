@@ -1,0 +1,28 @@
+name: bandwhich
+description: Terminal bandwidth utilization tool that shows which processes and connections are using the network. bandwhich maps live traffic to PIDs so you can find a training job flooding the NIC or a data loader saturating a shared cluster link.
+tagline: See which processes are using the network
+
+github_url: https://github.com/imsnif/bandwhich
+website_url: https://github.com/imsnif/bandwhich
+docs_url: https://github.com/imsnif/bandwhich
+
+install_command: brew install bandwhich
+
+category: Monitoring
+tags: [network, bandwidth, tui, cli, rust, processes]
+pricing: free
+is_open_source: true
+license: MIT
+
+problem_solved: |
+  iftop shows connections but not which Python process owns them, so a noisy
+  data loader and a model download look the same. bandwhich attributes live
+  bandwidth to processes and remote addresses so you can stop the job saturating
+  a shared GPU node before it starves checkpoint uploads.
+
+use_cases:
+  - Find which training worker is flooding the NIC during a dataset pull
+  - See if a data loader is saturating a shared cluster uplink
+  - Debug slow checkpoint uploads by watching per-process bandwidth
+  - Identify unexpected outbound traffic from an inference container
+  - Compare network use of distributed training ranks on one machine
