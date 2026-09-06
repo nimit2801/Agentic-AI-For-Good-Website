@@ -1,0 +1,26 @@
+name: Towhee
+description: Framework for building neural data processing pipelines that turn raw images, video, audio, and text into embeddings with composable operators. Designed so teams can assemble embedding and multimodal ETL flows without writing custom model-serving glue for every modality.
+tagline: Neural data pipelines that turn media into embeddings
+
+github_url: https://github.com/towhee-io/towhee
+website_url: https://towhee.io
+docs_url: https://towhee.readthedocs.io
+install_command: pip install towhee
+
+category: Data
+tags: [embeddings, multimodal, python, data-pipeline, etl, computer-vision, nlp]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Getting from raw images, video, or text to embeddings usually means one-off
+  scripts, ad-hoc model loaders, and brittle batch jobs. Towhee lets you compose
+  neural operators into a pipeline so embedding generation, preprocessing, and
+  multimodal ETL stay in one reusable Python flow instead of scattered notebooks.
+
+use_cases:
+  - Encode images and video frames into embeddings for a vector search index
+  - Build a multimodal ETL pipeline that preprocesses text and media before training
+  - Prototype embedding operators locally then reuse the same pipeline in production
+  - Extract audio and document features without writing a custom model-serving stack

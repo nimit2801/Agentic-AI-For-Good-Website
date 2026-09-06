@@ -1,0 +1,27 @@
+name: AgentVerse
+description: Framework from OpenBMB for deploying multiple LLM-based agents in task-solving crews and multi-agent simulations. Provides orchestration for collaborative problem solving as well as environments where agents interact, making it useful for research and applied multi-agent apps.
+tagline: Multi-agent task solving and simulation for LLM crews
+
+github_url: https://github.com/OpenBMB/AgentVerse
+website_url: https://github.com/OpenBMB/AgentVerse
+docs_url: https://github.com/OpenBMB/AgentVerse
+install_command: pip install agentverse
+
+category: Agents
+tags: [python, agents, multi-agent, simulation, llm, orchestration]
+pricing: free
+is_open_source: true
+license: Apache-2.0
+
+problem_solved: |
+  Most agent libraries target a single assistant loop and do not model a society
+  of agents that debate, assign roles, or act in a shared environment. AgentVerse
+  ships two frameworks, task-solving crews and multi-agent simulation, so you can
+  study collaboration and deploy multi-agent applications without building the
+  orchestration layer from scratch.
+
+use_cases:
+  - Assemble a task-solving crew of LLM agents that divide work and merge results
+  - Simulate multi-agent environments to study cooperation, debate, and role play
+  - Prototype applied multi-agent apps where specialists hand off to each other
+  - Research agent societies with a shared environment instead of a single chatbot
